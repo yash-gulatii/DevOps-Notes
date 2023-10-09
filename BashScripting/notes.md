@@ -403,7 +403,7 @@ Below are some examples of scheduling cron jobs.
 | `0 6 * * 1-5` | Run a script at 6am from Monday to Friday | `0 6 * * 1-5 /path/to/script.sh` |
 | `0 0 1-7 * *` | Run a script on the first 7 days of every month | `0 0 1-7 * * /path/to/script.sh` |
 | `0 12 1 * *` | Run a script on the first day of every month at noon | `0 12 1 * * /path/to/script.sh` |
-|-----------------|--------------------|-----------|
+
 
 ##### using crontab
 
