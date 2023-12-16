@@ -68,23 +68,31 @@ Write-Host "Hello world!"
 
 - Get-Command
 
-```pwsh Get-Command -CommandTyper cmdlet```
+```pwsh 
+Get-Command -CommandTyper cmdlet
+```
 
 - Get-Help
 
-```pwsh Get-Help *(Any-Command)```
+```pwsh 
+Get-Help *(Any-Command)
+```
 
->Note- Asterisk`*` is used to display all the possible commands.
+>Note- Asterisk `*` is used to display all the possible commands.
 
 - Piping
 
 Syntax:
 
-```pwsh Command-1 | Command-2```
+```pwsh 
+Command-1 | Command-2
+```
 
 Example:
 
-```pwsh "Hello World!!" | Out-File Helloworld.txt```
+```pwsh 
+"Hello World!!" | Out-File Helloworld.txt
+```
 
 ### Variables
 
@@ -97,3 +105,68 @@ A variable is a unit of memory in which values are stored. In PowerShell, variab
 - Strings
 - Booleans
 - Datetime Values
+
+#### Example
+
+```pwsh
+$FavChar = "Mr. Bean"
+```
+
+Method Usage in String - 
+
+```pwsh
+$FavCharacter.Length
+```
+
+To Find Methods on the String -
+
+```pwsh
+Get-Member -InputObject $FavCharacter(Variable Name)
+```
+
+
+### Arrays
+
+Syntax -
+
+```pwsh
+$name = @(element1, element2)
+```
+
+Example -
+
+```pwsh
+$Jedi = @("Obi-Wan Kenobi", "Luke Skywalker", "Yoda", "Mace Windu")
+```
+
+Index - 
+
+```pwsh
+$Jedi[0]
+```
+
+### HashTables
+
+Syntax -
+
+```pwsh
+$name = @{key1 = value1; key2 = value2; key3 = value3}
+```
+
+Example - 
+
+```pwsh
+$Fellowship = @{"Wizard" = "Gandalf"; "Hobbit" = "Frodo"; "Elf" = "Legolas"}
+```
+Adding Elements
+
+```pwsh
+$Fellowship.Add("Dwarf", "Gimli")
+```
+
+Change Elements
+
+```pwsh
+$Fellowship.Set_Item("Dwarf", "Bilbo")
+```
+
